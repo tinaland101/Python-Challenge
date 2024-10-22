@@ -1,5 +1,9 @@
-The purpose of this is to read a cvs file from my user desktop and that anaylsis the dataset
-The Pybank in corporates The total number of months included in the dataset
+Purpose:T o read a cvs file from my user desktop and anaylzes the dataset(s) and perform statisical anaylsis.
+:Pybank and Pypoll 
+
+The Pybank analysis Goal:
+
+The total number of months included in the dataset
 
 The net total amount of "Profit/Losses" over the entire period
 
@@ -10,7 +14,8 @@ The greatest increase in profits (date and amount) over the entire period
 The greatest decrease in profits (date and amount) over the entire period
 
 
-The PyPoll analysis:
+The PyPoll analysis Goal:
+
 The total number of votes cast
 
 A complete list of candidates who received votes
