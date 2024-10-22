@@ -1,0 +1,5 @@
+ christinaland@Christinas-MacBook-Air Test.py % /usr/local/bin/python3 "/User s/christinaland/Desktop/PyPoll Code"
+Total votes cast: 369711
+Candidates and their results:
+Charles Casper Stockham: 85213 votes (23.05%) Diana DeGette: 272892 votes (73.81%)
+Raymon Anthony Doane: 11606 votes (3.14%) Winner: Diana DeGette with 272892 votes christinaland@Christinas-MacBook-Air Test.py %
