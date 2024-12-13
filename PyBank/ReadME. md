@@ -1,9 +1,16 @@
-Purpose:T o read a cvs file from my user desktop and anaylzes the dataset(s) and perform statisical anaylsis.
-:Pybank and Pypoll 
 
-The Pybank analysis Goal:
 
-The total number of months included in the dataset
+Purpose: To read a cvs file from my user desktop and anaylzes the dataset(s) and perform statisical anaylsis.
+:Pybank and Pypoll
+# Correct path to CSV file
+
+df = pd.read_csv("/System/Volumes/Data/Users/christinaland/Library/Mobile Documents/com~apple~CloudDocs/PyBank/Resources/budget_data.csv")
+
+ # Display the first few rows of the DataFrame
+
+print(df.head())
+#The Pybank analysis Goal:
+
 
 The net total amount of "Profit/Losses" over the entire period
 
@@ -11,18 +18,61 @@ The changes in "Profit/Losses" over the entire period, and then the average of t
 
 The greatest increase in profits (date and amount) over the entire period
 
-The greatest decrease in profits (date and amount) over the entire period
+The greatest decrease in profits (date and amount) over the entire peri
 
 
-The PyPoll analysis Goal:
 
-The total number of votes cast
+# 1. Total number of months included in the dataset
 
-A complete list of candidates who received votes
+total_months = df.shape[0]
 
-The percentage of votes each candidate won
+print(f"Total Months: {total_months}")
 
-The total number of votes each candidate won
+ 
 
-The winner of the election based on popular vote
+# 2. Net total amount of "Profit/Losses" over the entire period
+
+net_total = df['Profit/Losses'].sum()
+
+print(f"Net Total Profit/Losses: ${net_total}")
+
+ 
+
+# 3. Calculate the changes in "Profit/Losses" over the entire period
+
+df['Change'] = df['Profit/Losses'].diff()
+
+ 
+
+# Average of those changes
+
+average_change = df['Change'].mean()
+
+print(f"Average Change in Profit/Losses: ${average_change:.2f}")
+
+ 
+
+# 4. Greatest increase in profits
+
+greatest_increase = df.loc[df['Change'].idxmax()]
+
+increase_date = greatest_increase['Date']
+
+increase_amount = greatest_increase['Change']
+
+print(f"Greatest Increase in Profits: {increase_date} (${increase_amount})")
+
+ 
+
+# 5. Greatest decrease in profits
+
+greatest_decrease = df.loc[df['Change'].idxmin()]
+
+decrease_date = greatest_decrease['Date']
+
+decrease_amount = greatest_decrease['Change']
+
+print(f"Greatest Decrease in Profits: {decrease_date} (${decrease_amount})")
+
+ 
 
