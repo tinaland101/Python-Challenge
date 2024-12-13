@@ -2,11 +2,11 @@
 
 Purpose: To read a cvs file from my user desktop and anaylzes the dataset(s) and perform statisical anaylsis.
 :Pybank and Pypoll
-# Correct path to CSV file
+
 
 df = pd.read_csv("/System/Volumes/Data/Users/christinaland/Library/Mobile Documents/com~apple~CloudDocs/PyBank/Resources/budget_data.csv")
 
- # Display the first few rows of the DataFrame
+
 
 print(df.head())
 #The Pybank analysis Goal:
