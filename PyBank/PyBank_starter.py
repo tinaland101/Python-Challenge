@@ -6,13 +6,13 @@ import pandas as pd
 
  
 
-# Correct path to your CSV file
+
 
 df = pd.read_csv("/System/Volumes/Data/Users/christinaland/Library/Mobile Documents/com~apple~CloudDocs/PyBank/Resources/budget_data.csv")
 
  
 
-# Display the first few rows of the DataFrame
+# head display
 
 print(df.head())
 
